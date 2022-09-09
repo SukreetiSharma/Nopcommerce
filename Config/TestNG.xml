@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Cases" verbose="1" >
+    <test name="Verify User is able to login">
+        <parameter name="testRunId" value="TCTC-1"/>
+        <classes>
+            <class name="NopCommerce.Test.VerifyUserAbleToLogin"/>
+        </classes>
+    </test>
+</suite>
