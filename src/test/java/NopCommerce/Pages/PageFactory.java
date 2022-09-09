@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 public class PageFactory {
     WebDriver driver;
     public UserAbleToLogin toLogin;
+    public UserAbleToSearchDiscounts toSearchDiscounts;
 
     public PageFactory(WebDriver driver){
         this.driver = driver;
@@ -15,6 +16,13 @@ public class PageFactory {
             toLogin = new UserAbleToLogin(driver);
         }
         return toLogin;
+    }
+
+    public UserAbleToSearchDiscounts getToSearchDiscounts(){
+        if(toLogin == null){
+            toSearchDiscounts = new UserAbleToSearchDiscounts(driver);
+        }
+        return toSearchDiscounts;
     }
 
 }
