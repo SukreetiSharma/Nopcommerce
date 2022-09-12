@@ -1,9 +1,26 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Cases" verbose="1" >
-    <test name="Verify User is able to login">
-        <parameter name="testRunId" value="TCTC-1"/>
+<!--    <test name="Verify User is able to login">-->
+<!--    <parameter name="browserName" value="chrome"></parameter>-->
+    <!--        <parameter name="testRunId" value="TCTC-1"/>-->
+<!--        <classes>-->
+<!--            <class name="NopCommerce.Test.VerifyUserAbleToLogin"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Verify User is able to Search Discounts">-->
+<!--    <parameter name="browserName" value="chrome"></parameter>-->
+    <!--        <parameter name="testRunId" value="TCTC-2"/>-->
+<!--        <classes>-->
+<!--            <class name="NopCommerce.Test.TestUserAbleToSearchDiscounts"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+    <test name="Verify User is able to Add Discounts">
+        <parameter name="browserName" value="chrome"></parameter>
+
+        <!--        <parameter name="browserName" value="firefox"></parameter>-->
+        <parameter name="testRunId" value="TCTC-3"/>
         <classes>
-            <class name="NopCommerce.Test.VerifyUserAbleToLogin"/>
+            <class name="NopCommerce.Test.TestUserAbleToAddDiscount"/>
         </classes>
     </test>
 </suite>

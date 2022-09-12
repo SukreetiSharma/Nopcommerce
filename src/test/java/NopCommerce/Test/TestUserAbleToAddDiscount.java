@@ -2,12 +2,13 @@ package NopCommerce.Test;
 
 import org.testng.annotations.Test;
 
-public class TestUserAbleToSearchDiscounts extends BaseClass {
+public class TestUserAbleToAddDiscount extends BaseClass {
 
     @Test
-    public void AbleToSearch() throws InterruptedException {
+    public void AbleToAddProduct() throws InterruptedException {
         pageFactory.getUserAbleToLogin().LoginToDashboard();
-        pageFactory.getToSearchDiscounts().SearchDicounts();
+        pageFactory.getToAddDiscounts().ableToAddDiscounts();
         pageFactory.getToLogout().ableToLogout();
     }
+
 }

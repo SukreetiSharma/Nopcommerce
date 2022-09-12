@@ -6,6 +6,8 @@ public class PageFactory {
     WebDriver driver;
     public UserAbleToLogin toLogin;
     public UserAbleToSearchDiscounts toSearchDiscounts;
+    public UserableToLogout toLogout;
+    public UserAbleToAddDiscounts toAddDiscounts;
 
     public PageFactory(WebDriver driver){
         this.driver = driver;
@@ -19,10 +21,22 @@ public class PageFactory {
     }
 
     public UserAbleToSearchDiscounts getToSearchDiscounts(){
-        if(toLogin == null){
+        if(toSearchDiscounts == null){
             toSearchDiscounts = new UserAbleToSearchDiscounts(driver);
         }
         return toSearchDiscounts;
+    }
+    public UserableToLogout getToLogout(){
+        if(toLogout == null){
+            toLogout = new UserableToLogout(driver);
+        }
+        return toLogout;
+    }
+    public UserAbleToAddDiscounts getToAddDiscounts(){
+        if(toAddDiscounts == null){
+            toAddDiscounts = new UserAbleToAddDiscounts(driver);
+        }
+        return toAddDiscounts;
     }
 
 }

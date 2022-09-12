@@ -14,10 +14,10 @@ public class UserAbleToLogin {
     public UserAbleToLogin(WebDriver driver) {
         this.driver=driver;
     }
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-    public void LoginToDashboard(){
+    public void LoginToDashboard() throws InterruptedException {
         driver.findElement(Login).click();
         driver.findElement(Promotions).click();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 }
